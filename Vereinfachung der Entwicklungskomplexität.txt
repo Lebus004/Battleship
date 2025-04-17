@@ -1,0 +1,21 @@
+Vereinfachung der Entwicklungskomplexität durch Benennung der Einzelteile:
+
+- Background (10x10 Quadrate, Funktionen: Anzeige von Schüssen -> ins Leere / Hit)
+- Schiffe (Funktionen: Drehen, Status Lebend/Zerstört)
+- Schiff-Typen (4-5 Stk. mit unterschiedlichen Grössen)
+- Serveranbindung
+- Platzierungsphase
+- Schlachtphase (Mit Rundendynamik - Wechsel zum Gegner -, Kondition zum Beenden des Spiels)
+
+
+- Eventhandler - Platzierungsphase (Funktionen: Drag and Drop von Schiffen, Rotation, Button für Weiter)
+- Eventhandler - Schlachtphase (Funktionen: Zielen auf Gegner, Hit / Miss eigener Schuss, Hit / Miss Gegner, (Schiff versenkt?))
+- Eventhandler - Ende (Beendung der Spielrunde mit Ergebnis, Schliessung des Loops mit Beendung des Spiel (oder evt. zurück zum Menü)
+
+
+Das Spiel läuft über einen grossen Game-Loop. Dieser beinhaltet:
+(evt. Main Menü)
+
+2 Phasen:
+- Platzierungsphase: 1 Grid und auswählbare Schiffe zum platzieren (Drag and Drop + irgendwie rotieren)
+- Schlachtphase 2 Grids übereinander offen (Eigenes und Gegnergrid), diese zeigen Schüsse und deren Ergebnisse an und die eigenen Schiffe sowie deren Zustand (getroffen oder nicht)
